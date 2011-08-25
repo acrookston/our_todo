@@ -11,6 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="modernizr-1.7.min.js"></script>
 </head>
 
 <body>
@@ -27,15 +28,17 @@
         <input type="submit" value="Add Task"/>
       </form>
       <ul id="tasks">
-        <li><input type="checkbox" value="1"><span>Read "Founders at Work"</span></li>
-        <li><input type="checkbox" value="1"><span>Eat lunch</span></li>
-        <li><input type="checkbox" value="1"><span>Pick up Sally from the airport</span></li>
-        <li><input type="checkbox" value="1"><span>Get fresh fruit from the grocery store</span></li>
-        <li class="done"><input type="checkbox" value="1" checked><span>Brush your teeth</span></li>
-        <li class="done"><input type="checkbox" value="1" checked><span>Give Andrew a job ;)</span></li>
+        <li><input type="checkbox" value="1"><label>Read "Founders at Work"</label></li>
+        <li><input type="checkbox" value="1"><label>Eat lunch</label></li>
+        <li><input type="checkbox" value="1"><label>Pick up Sally from the airport</label></li>
+        <li><input type="checkbox" value="1"><label>Get fresh fruit from the grocery store</label></li>
+        <li class="done"><input type="checkbox" value="1" checked><label>Brush your teeth</label></li>
+        <li class="done"><input type="checkbox" value="1" checked><label>Give Andrew a job ;)</label></li>
       </ul>
     </div>
   </div>
-  
+
+  <script src="jquery-1.6.1.js"></script>
+  <script src="application.js"></script>
 </body>
 </html>
