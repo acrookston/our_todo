@@ -268,7 +268,7 @@ body {
   color: #6a6a6a;
   text-align: center;
   font-size: 170%;
-  text-shadow: 0 -1px 0 #555;
+  text-shadow: -1px -1px 0 #505050, 0, 1px 0 #b0b0b0;
 }
 
 .box {
