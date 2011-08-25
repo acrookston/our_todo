@@ -13,12 +13,31 @@ $(function(){
     }
   });
 
-  $('form').bind('submit', function(e){
+  $('label').live('click', function(){
+    var label = $(this);
+    if (!label.parent().is('.done')) {
+      label.hide();
+      var input = $('<input type="text"/>').val(label.text()).appendTo(label.parent()).select();
+      input.blur(function(){
+        label.text(input.val()).show();
+        input.remove();
+      }).bind('keypress', function(e){
+        if((e.keyCode || e.which) == 13) {
+          label.text(input.val()).show();
+          input.remove();
+        }
+      });
+    }
+  });
+
+  $('form').submit(function(e){
     e.preventDefault();
     var input = $('[type=text]');
-    var randomid = Math.floor(Math.random()*11);
-    var item = $('<li><input type="checkbox" id="' + randomid + '"/><label for="' + randomid + '">' + input.val() + '</label></li>').hide();
-    $('ul').prepend(item.fadeIn());
-    input.val('');
+    if (input.val().length > 0) {
+      var item = $('<li><input type="checkbox"/><label>' + input.val() + '</label></li>').hide();
+      $('ul').prepend(item.fadeIn());
+      input.val('');
+    }
+    return false;
   });
 });
