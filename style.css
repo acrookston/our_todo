@@ -1,0 +1,344 @@
+/*
+ Basic normalization from http://github.com/necolas/normalize.css
+ There's no point in re-inventing the wheel. ;)
+ Application styles are further down.
+*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+audio:not([controls]) {
+    display: none;
+}
+[hidden] {
+    display: none;
+}
+html {
+    font-size: 100%; /* 1 */
+    overflow-y: scroll; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 3 */
+    -ms-text-size-adjust: 100%; /* 3 */
+}
+body {
+    margin: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+a {
+    color: #00e;
+}
+a:visited {
+    color: #551a8b;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover,
+a:active {
+    outline: 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b, 
+strong { 
+    font-weight: bold; 
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+dfn {
+    font-style: italic;
+}
+mark {
+    background: #ff0;
+    color: #000;
+}
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+q {
+    quotes: none;
+}
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+small {
+    font-size: 75%;
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+ul,
+ol {
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+dd {
+    margin: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+figure {
+    margin: 0;
+}
+form {
+    margin: 0;
+}
+fieldset {
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    border: 0; /* 1 */
+    *margin-left: -7px; /* 2 */
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+button,
+input {
+    line-height: normal; /* 1 */
+    *overflow: visible;  /* 2 */
+}
+table button,
+table input {
+    *overflow: auto;
+}
+button,
+html input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+    cursor: pointer; /* 1 */
+    -webkit-appearance: button; /* 2 */
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+
+/* =============================================================================
+   Application styles
+   ========================================================================== */
+
+
+
+
+body {
+  background: #f9f9f9 url(background.jpg);
+  color: #444;
+}
+
+#header {
+  background: #444 url(header.jpg);
+  height: 44px;
+}
+
+#header h1 {
+  display: inline-block;
+  margin: 0;
+  color: #222;
+  text-shadow: 0 -1px 0 #111, 0 1px 0 #555;
+  font-size: 140%;
+  padding: 0.4em 0 0.15em 40px;
+  background: url(checkbox.png) no-repeat 15px 0.65em;
+  font-weight: normal;
+}
+#header a {
+  font-size: 75%;
+  float: right;
+  display: inline-block;
+  color: #ddd;
+  text-shadow: 0 -1px 0 #222;
+  text-decoration: none;
+  height: 16px;
+  width: 100px;
+  padding: 14px 0;
+  text-align: center;
+  border-left: 1px solid rgba(0,0,0, 0.3);
+}
+
+
+#main {
+  width: 600px;
+  margin: 100px auto 0 auto;
+}
+#main h1 {
+  color: #6a6a6a;
+  text-align: center;
+  text-shadow: 0 -1px 1px #333, 0 1px 0 #fff;
+}
+
+.box {
+  background: #fff;
+  border: 5px solid #ccc;
+     -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  border-top: 1px solid #eee;
+  padding: 0.6em 0 0.6em 20px;
+  text-shadow: 0 1px 0 #fff;
+}
+ul li:first-item {
+  border: 0;
+}
+ul li.done {
+  opacity: 0.6;
+}
+
+ul li input {
+  margin-right: 1em;
+  position: relative;
+  top: -2px;
+}
+
+form {
+  padding: 20px 15px;
+  border-bottom: 1px solid #ddd;
+  background: #efefef;
+  /* border radius because of a bug with inner elements floating ontop of borders w/ border-radius */
+       -moz-border-radius-topleft: 6px;
+      -moz-border-radius-topright: 6px;
+   -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+            border-radius-topleft: 6px;
+           border-radius-topright: 6px;
+
+}
+
+form input {
+  font-size: 120%;
+  padding: 0.3em;
+}
+
+form input[type=text] {
+  width: 409px;
+  margin-right: 15px;
+  border: 1px solid #d0d0d0;
+  outline: 0;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+form input[type=submit] {
+  padding: 0.3em 0.8em;
+  background: #1089fe;
+  border: 1px solid #2f53cd;
+  color: #fff;
+     -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+
+  text-shadow: 0 -1px 1px #2f5ce5;
+  font-weight: bold;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+  background-color: #0b8fff; /* medium color fallback */
+  background: -moz-linear-gradient(top, #26a6fe 0%, #1c7fff 10%, #1c7fff 39%, #2872fc 69%, #2f5ce5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#26a6fe), color-stop(10%,#1c7fff), color-stop(39%,#1c7fff), color-stop(69%,#2872fc), color-stop(100%,#2f5ce5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #26a6fe 0%,#1c7fff 10%,#1c7fff 39%,#2872fc 69%,#2f5ce5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #26a6fe 0%,#1c7fff 10%,#1c7fff 39%,#2872fc 69%,#2f5ce5 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #26a6fe 0%,#1c7fff 10%,#1c7fff 39%,#2872fc 69%,#2f5ce5 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26a6fe', endColorstr='#2f5ce5',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #26a6fe 0%,#1c7fff 10%,#1c7fff 39%,#2872fc 69%,#2f5ce5 100%); /* W3C */
+}
+
+
+
+
