@@ -220,6 +220,7 @@ body {
 #header {
   background: #444 url(header.jpg);
   height: 44px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 #header h1 {
@@ -245,16 +246,29 @@ body {
   text-align: center;
   border-left: 1px solid rgba(0,0,0, 0.3);
 }
+#header a:hover {
+  background: #111;
+}
+#header a:after {
+  content: ' ';
+  background: rgba(255,255,255, 0.1);
+  height: 44px;
+  width: 1px;
+  display: block;
+  top: 0;
+  position: absolute;
+}
 
 
 #main {
   width: 600px;
-  margin: 100px auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 #main h1 {
   color: #6a6a6a;
   text-align: center;
-  text-shadow: 0 -1px 1px #333, 0 1px 0 #fff;
+  font-size: 170%;
+  text-shadow: 0 -1px 0 #555;
 }
 
 .box {
@@ -266,28 +280,6 @@ body {
 
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-ul li {
-  border-top: 1px solid #eee;
-  padding: 0.6em 0 0.6em 20px;
-  text-shadow: 0 1px 0 #fff;
-}
-ul li:first-item {
-  border: 0;
-}
-ul li.done {
-  opacity: 0.6;
-}
-
-ul li input {
-  margin-right: 1em;
-  position: relative;
-  top: -2px;
-}
 
 form {
   padding: 20px 15px;
@@ -300,7 +292,6 @@ form {
   -webkit-border-top-right-radius: 6px;
             border-radius-topleft: 6px;
            border-radius-topright: 6px;
-
 }
 
 form input {
@@ -340,5 +331,30 @@ form input[type=submit] {
 }
 
 
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  border-top: 1px solid #eee;
+  padding: 0.6em 0 0.6em 20px;
+  text-shadow: 0 1px 0 #fff;
+
+}
+ul li:first-item {
+  border: 0;
+}
+ul li.done {
+  opacity: 0.6;
+}
+
+ul li input {
+  margin-right: 1em;
+  position: relative;
+  top: -2px;
+}
 
 
