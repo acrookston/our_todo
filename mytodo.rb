@@ -3,6 +3,8 @@ require 'sinatra/base'
 require 'haml'
 
 class MyTodo < Sinatra::Base
+
+  helpers Sinatra::CsrfHelper
   set :root, File.dirname(__FILE__)
   set :public, Proc.new { File.join(root, "public") }
   set :haml, {:format => :html5 }
