@@ -1,0 +1,22 @@
+%form{:action => "#", :method => "post"}
+  %input{:placeholder => "Add a task…", :type => "text"}/
+  %input{:type => "submit", :value => "Add Task"}/
+%ul#tasks
+  %li
+    %input{:type => "checkbox", :value => "1"}/
+    %label Read "Founders at Work"
+  %li
+    %input{:type => "checkbox", :value => "1"}/
+    %label Eat lunch
+  %li
+    %input{:type => "checkbox", :value => "1"}/
+    %label Pick up Sally from the airport
+  %li
+    %input{:type => "checkbox", :value => "1"}/
+    %label Get fresh fruit from the grocery store
+  %li.done
+    %input{:checked => "", :type => "checkbox", :value => "1"}/
+    %label Brush your teeth
+  %li.done
+    %input{:checked => "", :type => "checkbox", :value => "1"}/
+    %label Give Andrew a job ;)
