@@ -1,23 +1,12 @@
-%form{:action => "#", :method => "post"}
-  %input{:placeholder => "Add a task…", :type => "text"}
+%form{:action => "/", :method => "post"}
+  %input{:placeholder => "Add a task…", :type => "text", :id => "new_todo_item", :name => 'new_todo_item' }
   %input{:type => "submit", :value => "Add Task"}
   = csrf_tag
 %ul#tasks
-  %li
-    %input{:type => "checkbox", :value => "1"}/
-    %label Read "Founders at Work"
-  %li
-    %input{:type => "checkbox", :value => "1"}/
-    %label Eat lunch
-  %li
-    %input{:type => "checkbox", :value => "1"}/
-    %label Pick up Sally from the airport
-  %li
-    %input{:type => "checkbox", :value => "1"}/
-    %label Get fresh fruit from the grocery store
-  %li.done
-    %input{:checked => "", :type => "checkbox", :value => "1"}/
-    %label Brush your teeth
-  %li.done
-    %input{:checked => "", :type => "checkbox", :value => "1"}/
-    %label Give Andrew a job ;)
+  - if todos.length == 0
+    %li.no-items There are no todos. Start by entering one in the input field above.
+  - else
+    - todos.each do |todo|
+      %li{ :id => "item_#{todo.id}" }
+        %input{:type => "checkbox", :value => "1", :id => todo.id, :checked => (todo.completed ? true : nil)}
+        %label= todo.title

@@ -14,8 +14,24 @@ class MyTodoWorld
   include Capybara::DSL
   include RSpec::Expectations
   include RSpec::Matchers
+
+  # Placing this here for now. Don't want to create a new module for this little custom code quite yet. ;)
+  def row_to_attributes(row)
+    row.to_a.inject({}) do |hash, row|
+      name, value = row.first.downcase.gsub(' ', '_'), row.last
+      hash[name] =  case name
+                      when /(_at|_on)$/ then Time.parse value
+                      else value
+                    end
+      hash
+    end
+  end
 end
 
 World do
   MyTodoWorld.new
+end
+
+After do
+  Todo.delete_all
 end
