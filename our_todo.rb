@@ -7,7 +7,7 @@ require 'json'
 Dir[File.dirname(__FILE__) + "/config/*.rb"].each {|file| require file  }
 Dir[File.dirname(__FILE__) + "/helpers/*.rb"].each {|file| require file  }
 
-class MyTodo < Sinatra::Base
+class OurTodo < Sinatra::Base
 
   helpers Sinatra::CsrfHelper
   set :root, File.dirname(__FILE__)

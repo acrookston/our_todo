@@ -2,6 +2,6 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-require './mytodo'
-run MyTodo
+require './our_todo'
+run OurTodo
 

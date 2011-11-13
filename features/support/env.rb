@@ -2,15 +2,15 @@
 
 ENV['RACK_ENV'] = 'test'
 
-require File.join(File.dirname(__FILE__), '..', '..', 'mytodo.rb')
+require File.join(File.dirname(__FILE__), '..', '..', 'our_todo.rb')
 
 require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
 
-Capybara.app = MyTodo
+Capybara.app = OurTodo
 
-class MyTodoWorld
+class OurTodoWorld
   include Capybara::DSL
   include RSpec::Expectations
   include RSpec::Matchers
@@ -29,7 +29,7 @@ class MyTodoWorld
 end
 
 World do
-  MyTodoWorld.new
+  OurTodoWorld.new
 end
 
 After do

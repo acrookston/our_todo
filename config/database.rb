@@ -3,15 +3,15 @@
 ################################################################################
 
 configure :development do
-  ENV['MONGOID_DATABASE'] = 'mytodo'
+  ENV['MONGOID_DATABASE'] = 'ourtodo'
 end
 
 configure :test do
-  ENV['MONGOID_DATABASE'] = 'mytodo_test'
+  ENV['MONGOID_DATABASE'] = 'ourtodo_test'
 end
 
 configure :production do
-  ENV['MONGOID_DATABASE'] = 'mytodo'
+  ENV['MONGOID_DATABASE'] = 'ourtodo'
 end
 
 ################################################################################
