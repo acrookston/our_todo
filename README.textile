@@ -7,6 +7,11 @@ The test only stated to create the html and css code but I decided to create a f
 
 I only posted it to Github for fun but you are free to use this in any way you like under the MIT license.
 
+h2. Author
+
+Andrew Crookston
+"andrew@crookston.se":mailto:andrew@crookston.se
+"http://acrookston.com":http://acrookston.com
 
 h2. Details
 
