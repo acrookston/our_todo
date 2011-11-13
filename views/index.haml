@@ -1,5 +1,5 @@
-%form{:action => "/", :method => "post"}
-  %input{:placeholder => "Add a task…", :type => "text", :id => "new_todo_item", :name => 'new_todo_item' }
+%form#new_item{:action => "/items", :method => "post"}
+  %input{:placeholder => "Add a task…", :type => "text", :id => "title", :name => 'title' }
   %input{:type => "submit", :value => "Add Task"}
   = csrf_tag
 %ul#tasks
@@ -7,6 +7,6 @@
     %li.no-items There are no todos. Start by entering one in the input field above.
   - else
     - todos.each do |todo|
-      %li{ :id => "item_#{todo.id}" }
+      %li{ :id => todo.id.to_s, :class => (todo.completed ? 'done' : nil) }
         %input{:type => "checkbox", :value => "1", :id => todo.id, :checked => (todo.completed ? true : nil)}
         %label= todo.title

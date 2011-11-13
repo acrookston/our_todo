@@ -9,7 +9,9 @@ Feature: view pages
     And I should see "Brush teeth"
   Scenario: Add a todo
     Given I am on the home page
-    And I fill in "new_todo_item" with "Add cucumber tests"
+    And I fill in "title" with "Add cucumber tests"
     When I press "Add Task"
     Then I should be on the home page
     And I should see "Add cucumber tests"
+
+# Todo test sort order and updates
