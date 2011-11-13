@@ -1,0 +1,25 @@
+h1. our.todo
+
+A tiny web based ToDo application.
+
+This little project was brought into the world when I was given a small developer task to complete as a test.
+The test only stated to create the html and css code but I decided to create a fully functioning application out of what I had created.
+
+I only posted it to Github for fun but you are free to use this in any way you like under the MIT license.
+
+
+h2. Details
+
+Only tested in Google Chrome/Firefox.
+
+Runs on:
+- Sinatra
+- MongoDB
+
+Thus you need to know how to install and run these before you can use this app.
+
+h2. Disclaimer and License
+
+Released under MIT License. Please review LICENSE.txt for userights and terms.
+
+This code was originally posted to "http://github.com/acrookston/our_todo":http://github.com/acrookston/our_todo
